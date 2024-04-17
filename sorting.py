@@ -23,11 +23,29 @@ def read_data(file_name):
     return data
 
 
+def selection_sort(numbers_1):
+        n = len(numbers_1)
+        for i in range(n):
+            number_index = i
+            for j in range(i+1, n):
+                if numbers_1[j] < numbers_1[number_index]:
+                    number_index = j
+            numbers_1[i], numbers_1[number_index] = numbers_1[number_index], numbers_1[i]
+        return numbers_1
+
+
+
+
 
 
 def main():
     numbers = read_data("numbers.csv")
-    print(numbers)
+    # print(numbers)
+    numbers_1 = numbers["series_1"]
+    # print(numbers_1)
+    sorted_numbers = selection_sort(numbers_1)
+    print(sorted_numbers)
+
 
 
 if __name__ == '__main__':
