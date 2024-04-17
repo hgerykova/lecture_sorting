@@ -23,25 +23,38 @@ def read_data(file_name):
     return data
 
 
-def selection_sort(numbers_1, direction="vzestupne"):
-        n = len(numbers_1)
-        if direction == "vzestupne":
-            for i in range(n):
-                number_index = i
-                for j in range(i+1, n):
-                    if numbers_1[j] < numbers_1[number_index]:
-                        number_index = j
-                numbers_1[i], numbers_1[number_index] = numbers_1[number_index], numbers_1[i]
-        else:
-            for i in range(n):
-                number_index = i
-                for j in range(i+1, n):
-                    if numbers_1[j] > numbers_1[number_index]:
-                        number_index = j
-                numbers_1[i], numbers_1[number_index] = numbers_1[number_index], numbers_1[i]
+# def selection_sort(numbers_1, direction="vzestupne"):
+#         n = len(numbers_1)
+#         if direction == "vzestupne":
+#             for i in range(n):
+#                 number_index = i
+#                 for j in range(i+1, n):
+#                     if numbers_1[j] < numbers_1[number_index]:
+#                         number_index = j
+#                 numbers_1[i], numbers_1[number_index] = numbers_1[number_index], numbers_1[i]
+#         else:
+#             for i in range(n):
+#                 number_index = i
+#                 for j in range(i+1, n):
+#                     if numbers_1[j] > numbers_1[number_index]:
+#                         number_index = j
+#                 numbers_1[i], numbers_1[number_index] = numbers_1[number_index], numbers_1[i]
+#
+#
+#         return numbers_1
 
 
-        return numbers_1
+# def bubble_sort(numbers_1):
+#     for j in range(len(numbers_1)):
+#         n = len(numbers_1)
+#         for i in range(n-1):
+#             if numbers_1[i] > numbers_1[i+1]:
+#                 numbers_1[i], numbers_1[i+1] = numbers_1[i+1], numbers_1[i]
+#
+#     return numbers_1
+
+
+
 
 
 
@@ -52,9 +65,11 @@ def main():
     numbers = read_data("numbers.csv")
     # print(numbers)
     numbers_1 = numbers["series_1"]
-    # print(numbers_1)
-    sorted_numbers = selection_sort(numbers_1, "vzestupne")
-    print(sorted_numbers)
+    print(numbers_1)
+    # sorted_numbers = selection_sort(numbers_1, "vzestupne")
+    # print(sorted_numbers)
+    # sorted_numbers = bubble_sort(numbers_1)
+    # print(sorted_numbers)
 
 
 
